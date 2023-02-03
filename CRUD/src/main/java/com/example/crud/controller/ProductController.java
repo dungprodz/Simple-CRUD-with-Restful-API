@@ -43,7 +43,7 @@ public class ProductController {
 
     //API sap xep product
     @GetMapping("/views")
-    public List<Product> sort(@RequestParam("p") Optional<Integer> p){
+    public List<Product> sort(){
         Sort sort = Sort.by("price").ascending();
         List<Product> allProducts = productService.findAll(sort);
         return allProducts;
